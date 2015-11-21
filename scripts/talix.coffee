@@ -1,3 +1,19 @@
+# Description:
+#   In which Tlxbot interact with you
+
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   
+#
+# Author:
+#   sharonx
+
+
 module.exports = (robot) ->
 
   robot.hear /badger/i, (res) ->

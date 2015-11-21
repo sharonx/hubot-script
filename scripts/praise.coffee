@@ -1,3 +1,17 @@
+# Description:
+#   In which Tlxbot praise someone for you
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   tlxbot praise @user
+#
+# Author:
+#   sharonx
 
 module.exports = (robot) ->
   compliments = [

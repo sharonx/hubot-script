@@ -1,6 +1,21 @@
+# Description:
+#   In which Tlxbot says hi
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   None
+#
+# Author:
+#   sharonx
+
 module.exports = (robot) ->
   robot.hear /^(hi|hello),?\s+tlxbot$/i, (msg) ->
-    msg.send "Hello, #{msg.envelope.user.name}.";
+    msg.send "Hello, #{msg.envelope.user.name}."; 
 
   robot.hear /^(goodnight|night)$/i, (msg) ->
     msg.send "Goodnight, #{msg.envelope.user.name}.";
