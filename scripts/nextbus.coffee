@@ -1,5 +1,5 @@
 # Description:
-#   Hubot tells you when the Emery-go-round can pick you up
+#   Hubot tells you when the next bus 45 can pick you up
 #
 # Dependencies:
 #   None
@@ -8,11 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot when is the emery-go-round coming? - Tells you when the Emery-go-round bus will be at Hollis and 62nd.
-#   hubot remind me to leave for the bus in <n> minutes - Hubot will remind you to leave in time to catch the next available bus.
+#   hubot when is the bus 45 coming? - Tells you when the bus 45 will be at Hollis and 62nd.
 #
 # Author:
-#   mottum
+#   sharonx
 
 request   = require 'request'
 xml2js    = require 'xml2js'
