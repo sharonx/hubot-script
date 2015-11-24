@@ -24,7 +24,6 @@ You can start tlxbot locally by running:
 
 You'll see some start up output and a prompt:
 
-    [Sat Feb 28 2015 12:38:27 GMT+0000 (GMT)] INFO Using default redis on localhost:6379
     tlxbot>
 
 Then you can interact with tlxbot by typing `tlxbot help`.

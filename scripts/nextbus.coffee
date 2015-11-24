@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot when is the bus 45 coming? - Tells you when the bus 45 will be at Hollis and 62nd.
+#   hubot when is the bus 45 coming? - Tells you when the bus 45 will be at 3rd and Brannan
 #
 # Author:
 #   sharonx
