@@ -23,7 +23,7 @@ module.exports = (robot) ->
   robot.hear /^(bonsoir),?\s+tlxbot$/i, (msg) ->
     msg.send "Bonsoir, #{msg.envelope.user.name}";
 
-  robot.hear /^(ca va),?\s+tlxbot$/i, (msg) ->
+  robot.hear /^(ca va),?\s+tlxbot\??$/i, (msg) ->
     msg.send "Très bien, merci #{msg.envelope.user.name}, et toi?";
 
   robot.hear /tlxbot traduit (.*)/i, (msg) ->
