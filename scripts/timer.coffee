@@ -16,7 +16,7 @@
 module.exports = (robot) ->
   robot.respond /alarm in\s+(\d+)\s+sec(.*)$/i, (res) ->
     sec = res.match[1]
-    message = res.match[2]
+    message = "#{res.envelope.user.name}, " + res.match[2]
     setTimeout ->
       res.send message
     , sec * 1000
