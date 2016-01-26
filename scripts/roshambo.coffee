@@ -31,14 +31,14 @@ module.exports = (robot) ->
       result = 'I WIN!'
     res.send '1, 2, 3....Roshambo!\n' + userSign + ' vs ' + tlxSign + '...' + result;
 
-  robot.hear /rock/i, (res) ->
+  robot.respond /rock/i, (res) ->
     roshambo('rock', res)
     return;
 
-  robot.hear /paper/i, (res) ->
+  robot.respond /paper/i, (res) ->
     roshambo('paper', res)
     return;
 
-  robot.hear /scissors/i, (res) ->
+  robot.respond /scissors/i, (res) ->
     roshambo('scissors',res)
     return;
