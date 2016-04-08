@@ -7,6 +7,7 @@
 
 
 hangoutsDomain = '4avnnnj2qfcr5azngjbepdbvkqe'
+id=''
 
 module.exports = (robot) ->
   robot.respond /start hangout at (\d+):(\d+)$/i, (msg) ->
@@ -14,7 +15,8 @@ module.exports = (robot) ->
     startMinute = parseInt(msg.match[2])
     console.log 'hour', startHour
     console.log 'minute', startMinute
-    setInterval (-> 
+    id = setInterval (-> 
+      console.log 'in'
       hour = new Date().getHours()
       if(hour != startHour)
         return
@@ -23,6 +25,10 @@ module.exports = (robot) ->
         return
       msg.send "I've started a Hangout! Join here: https://plus.google.com/hangouts/_/#{hangoutsDomain}"
     ), 60000
+
+  robot.respond /stop hangout/i, (msg) -> 
+    console.log 'no more hangout will be created', id
+    clearInterval(id)
 
   robot.hear /hangout url$/i, (msg) ->
     
