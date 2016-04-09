@@ -15,8 +15,11 @@ module.exports = (robot) ->
     startMinute = parseInt(msg.match[2])
     console.log 'hour', startHour
     console.log 'minute', startMinute
+    msg.send "hangout will start everday from Mon-Fri, at " + startHour + ":" + startMinute
     id = setInterval (-> 
-      console.log 'in'
+      day = new Date().getDay()
+      if (day == 6 || day == 7) 
+        return
       hour = new Date().getHours()
       if(hour != startHour)
         return
@@ -27,8 +30,8 @@ module.exports = (robot) ->
     ), 60000
 
   robot.respond /stop hangout/i, (msg) -> 
-    console.log 'no more hangout will be created', id
     clearInterval(id)
+    msg.send "No more hangout will be created"
 
   robot.hear /hangout url$/i, (msg) ->
     
